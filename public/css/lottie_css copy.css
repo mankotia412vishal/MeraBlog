@@ -1,0 +1,54 @@
+.container_ {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+}
+
+.container_ #left-side {
+  width: 50%;
+  text-align: center;
+  padding: 20px;
+}
+
+.container_ .typing {
+  font-family: Arial, sans-serif;
+  font-size: 36px;
+  font-weight: 300;
+  color: #00bcd4;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid #000;
+  animation: typing 5s steps(40, end) forwards; /* Increased duration and steps */
+}
+
+.container_ .sub-text {
+  font-family: Arial, sans-serif;
+  font-size: 24px; /* Adjust font size as needed */
+  font-weight: 300;
+  color: #00bcd4;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+.container_ #right-side {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container_ #lottie-animation {
+  width: 40%;
+  max-width: 400px;
+  height: auto;
+  margin-left: 20px;
+}

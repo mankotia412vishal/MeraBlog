@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MeraBlog by Vishal</title>
+
+  <!-- CSS Stylesheets -->
+  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="stylesheet" href="css/lottie_css.css">
+
+  <!-- Remix Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head> 
+<body>
+  <!-- Header -->
+  <header class="header">
+  <nav class="nav container">
+    <div class="nav__data">
+      <a href="#" class="nav__logo">
+        <i class="ri-code-s-slash-line"></i> MeraBlog
+      </a>
+
+      <div class="nav__toggle" id="nav-toggle">
+        <i class="ri-menu-line nav__toggle-menu"></i>
+        <i class="ri-close-line nav__toggle-close"></i>
+      </div>
+    </div>
+
+    <!-- Nav Menu -->
+    <div class="nav__menu" id="nav-menu">
+      <ul class="nav__list">
+        <li>
+          <a href="/" class="nav__link">Home</a>
+        </li>
+
+        <!--=============== DROPDOWN 1 ===============-->
+        <li class="dropdown__item">                      
+          <a href="recent_articles" class="nav__link">Recent Articles</a>
+        </li>
+
+        <!--=============== DROPDOWN 2 ===============-->
+        <li class="dropdown__item">
+          <a href="new_blog" class="nav__link">Add New Article</a>
+        </li>
+
+        
+      </ul>
+    </div>
+  </nav>
+</header>
+
+
+  <main>
+  <%= yield %>
+</main>
+
+  <!-- Footer -->
+  <footer class="footer section">
+    <div class="footer__container container grid">
+      <div>
+        <h1 class="footer__title"> MeraBlog ©2024 All rights reserved</h1>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.2/lottie.min.js"></script>
+  <script src="/js/main.js"></script>
+</body>
+</html>

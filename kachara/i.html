@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Text and Image Layout</title>
+<style>
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    border: 1px solid #ccc;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  .text {
+    flex: 1;
+    margin-right: 20px;
+  }
+  .image {
+    flex: 1;
+    text-align: center;
+  }
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="text">
+    <h2>Your Text Goes Here</h2>
+    <p>This is a sample text to demonstrate text and image layout.</p>
+  </div>
+  <div class="image">
+    <img src="public\images\Resume_photo.png" alt="Your Image">
+  </div>
+</div>
+</body>
+</html>

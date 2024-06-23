@@ -1,0 +1,56 @@
+<link rel="stylesheet" href="css/update.css">
+<h1 class="title">Read Full  Article on MeraBlog</h1>
+<div class="content-container">
+  <% if @blog %>
+    <div class="card">
+      <div class="blog-title" contenteditable="true"><%= @blog['title'] %></div>
+      <div class="blog-content" contenteditable="true"><%= @blog['content'] %></div>
+      <button class="update-button" onclick="updateBlog()">Update Article</button>
+      <button class="delete-button" onclick="deleteBlog()">Delete Article</button>
+    </div>
+  <% else %>
+    <p>Blog not found.</p>
+  <% end %>
+  <button class="back-button" onclick="window.location.href='/recent_articles'">Back to Recent Articles</button>
+</div>
+
+<!-- jQuery library -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+  function updateBlog() {
+    const newTitle = $('.blog-title').text();
+    const newContent = $('.blog-content').html(); // Use .html() to preserve HTML formatting
+
+    $('#new-title').val(newTitle);
+    $('#new-content').val(newContent);
+
+    $.ajax({
+      url: '/update/<%= @blog['_id'].to_s %>',
+      type: 'POST',
+      data: { new_title: newTitle, new_content: newContent },
+      success: function(response) {
+        alert('Blog post updated successfully!');
+        window.location.href = '/recent_articles'; // Redirect to recent articles page
+      },
+      error: function(error) {
+        alert('Error updating blog post!');
+      }
+    });
+  }
+
+  function deleteBlog() {
+    if (confirm('Are you sure you want to delete this article?')) {
+      $.ajax({
+        url: '/delete/<%= @blog['_id'].to_s %>',
+        type: 'DELETE',
+        success: function(response) {
+          alert('Blog post deleted successfully!');
+          window.location.href = '/recent_articles'; // Redirect to recent articles page
+        },
+        error: function(error) {
+          alert('Error deleting blog post!');
+        }
+      });
+    }
+  }
+</script>

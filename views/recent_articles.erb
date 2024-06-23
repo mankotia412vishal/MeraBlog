@@ -1,0 +1,79 @@
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<link rel="stylesheet" href="css/recent_articles.css">
+<h1 id="recent">Recent Articles on MeraBlog</h1>
+<div class="recent-articles-container">
+  <% blogs.each_with_index do |blog, index| %>
+    <div class="card">
+      <h2 class="article-title" data-index="<%= index %>">
+        <a href="/update?blog_id=<%= blog['_id'] %>">
+          <%= "#{index + 1}. #{blog['title']}" %>
+        </a>
+      </h2>
+     
+    </div>
+  <% end %>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<!-- jQuery library -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+  $(document).ready(function() {
+    $('.article-title').click(function() {
+      const index = $(this).data('index');
+      $('.article-content').removeClass('active');
+      $('.article-content[data-index="' + index + '"]').addClass('active');
+    });
+  });
+</script>
+
+<!-- Custom CSS styles -->
+<style>
+  
+  .recent-articles-container {
+    width: 100%;
+    max-width: 800px;
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    width: calc(50% - 20px);
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .card:hover {
+    transform: scale(1.05);
+  }
+
+  .article-title a {
+    color: blue;
+    text-decoration: none; /* Remove underline from links */
+  }
+
+  .article-content {
+    display: none;
+  }
+
+  .article-content.active {
+    display: block;
+  }
+</style>

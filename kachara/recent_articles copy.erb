@@ -1,0 +1,52 @@
+<link rel="stylesheet" href="css/recent_articles.css">
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+  $(document).ready(function() {
+    $('.article-title').click(function() {
+      const index = $(this).data('index');
+      $('.article-content').removeClass('active');
+      $('.article-content[data-index="' + index + '"]').addClass('active');
+    });
+  });
+</script>
+
+<style>
+.article-title {
+  color: blue;
+  cursor: pointer;
+  margin-bottom: 5px;
+}
+
+.article-content {
+  display: none;
+}
+
+.article-content.active {
+  display: block;
+}
+</style>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<h1 id="recent">Recent Articles on MeraBlog</h1>
+<div class="recent-articles-container">
+
+  <% blogs.each_with_index do |blog, index| %>
+    <div class="card">
+      <h2 class="article-title" data-index="<%= index %>"><%= "#{index + 1}. #{blog['title']}" %></h2>
+      <div class="article-content" data-index="<%= index %>">
+        <p><%= blog['content'] %></p>
+      </div>
+    </div>
+  <% end %>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>

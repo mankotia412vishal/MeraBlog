@@ -1,0 +1,57 @@
+/* CSS for recent_articles.css */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+  }
+  
+  .recent-articles-container {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
+  }
+  
+  .card h2 {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .card p {
+    font-size: 1.2em;
+    color: #555;
+    white-space: pre-wrap; /* Preserve whitespace formatting */
+  }
+  #recent{
+   /* place this recent articles heding in the center of the page */ 
+    text-align: center;
+    font-size: 2em;
+    color: hsl(220, 48%, 28%);
+    margin-bottom: 20px;
+
+  }
+  .article-title{
+    text-align: left;
+    font-size: 2em;
+    color: hsl(220, 49%, 64%);
+    margin-bottom: 20px;
+  }

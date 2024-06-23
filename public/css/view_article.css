@@ -1,0 +1,79 @@
+/* CSS for view_article.css */
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.form {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  max-width: 600px;
+  width: 100%;
+  text-align: left;
+  animation: fadeIn 1s ease-in-out;
+  height: 50vh; /* Set a fixed height */
+  overflow-y: auto; /* Enable vertical scrolling */
+}
+
+.blog-title {
+  font-size: 2em;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.blog-content {
+  font-size: 0.9em;
+  color: #555;
+  white-space: pre-wrap; /* Preserve whitespace formatting */
+}
+
+.recent {
+  font-size: 1em; /* Reduced button size */
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 16px; /* Reduced padding */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.recent:hover {
+  background-color: #0056b3;
+}
+
+.card {
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  background-color: #ffffff;
+  width: 100%; /* Equal width */
+  height: 100%; /* Equal height */
+}
+
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: translateY(-20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}

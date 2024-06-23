@@ -1,0 +1,57 @@
+.container_ {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+}
+
+/* Styling for the left side */
+#left-side {
+  width: 50%;
+  text-align: center; /* Center the text horizontally */
+  padding: 10px; /* Add padding for spacing */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center the text vertically */
+  position: relative;
+  left: 10px; /* Move it to the right */
+}
+
+/* Styling for the typing animation */
+.typing{
+  font-family: Arial, sans-serif;
+  font-size: 34px; /* Adjust font size as needed */
+  font-weight: 300;
+  color: hsl(220, 48%, 28%); /* Text color */
+  white-space: nowrap; /* Prevent text from wrapping */
+  overflow: hidden; /* Hide overflow text */
+  border-right: 2px solid #000; /* Border for typing effect */
+  animation: typing 3s steps(30, end) infinite;
+  margin-bottom: 20px; /* Add margin for spacing */
+  font-weight: bold;
+}
+
+/* Keyframes for typing animation */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/* Styling for the right side */
+#right-side {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#lottie-animation {
+  width: 60%; /* Adjust width of the Lottie animation */
+  max-width: 500px; /* Set a maximum width */
+  height: auto; /* Maintain aspect ratio */
+}
