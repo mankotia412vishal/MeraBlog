@@ -1,3 +1,3 @@
-./env
-kachara/
+.env
 Gemfile.lock
+kachara/
